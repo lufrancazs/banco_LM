@@ -1,5 +1,6 @@
 package br.com.lmf.BancoLM.entities;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,17 +33,15 @@ public class Cliente {
 	@Column(nullable = false, unique = true)
 	private String senha;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "endereco_id", referencedColumnName = "id")
 	private Endereco endereco;
 	
 	public Cliente() {
 	}
 
-	public Cliente(Long id, String nome, Integer cpfCnpj, Integer telefone, String email, String senha,
+	public Cliente(String nome, Integer cpfCnpj, Integer telefone, String email, String senha,
 			Endereco endereco) {
-		super();
-		this.id = id;
 		this.nome = nome;
 		this.cpfCnpj = cpfCnpj;
 		this.telefone = telefone;
@@ -103,7 +102,7 @@ public class Cliente {
 		return endereco;
 	}
 
-	public void setEndereco(Endereco endereco) {
+	public void setEnderecoCep(Endereco endereco) {
 		this.endereco = endereco;
 	}
 	
