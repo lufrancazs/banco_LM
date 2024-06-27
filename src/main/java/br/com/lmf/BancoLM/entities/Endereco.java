@@ -22,33 +22,22 @@ public class Endereco {
 	private String logradouro;
 	
     private String complemento;
-    private String unidade;
     private String bairro;
-    private String localidade;
     private String uf;
     private String ibge;
-    private String gia;
-    private String ddd;
-    private String siafi;
 	
 	public Endereco() {
 		
 	}
 
-	public Endereco(Long id, String cep, String logradouro, String complemento, String unidade, String bairro,
-			String localidade, String uf, String ibge, String gia, String ddd, String siafi) {
+	public Endereco(Long id, String cep, String logradouro, String complemento, String bairro, String uf, String ibge) {
 		this.id = id;
 		this.cep = cep;
 		this.logradouro = logradouro;
 		this.complemento = complemento;
-		this.unidade = unidade;
 		this.bairro = bairro;
-		this.localidade = localidade;
 		this.uf = uf;
 		this.ibge = ibge;
-		this.gia = gia;
-		this.ddd = ddd;
-		this.siafi = siafi;
 	}
 
 	public Long getId() {
@@ -83,28 +72,12 @@ public class Endereco {
 		this.complemento = complemento;
 	}
 
-	public String getUnidade() {
-		return unidade;
-	}
-
-	public void setUnidade(String unidade) {
-		this.unidade = unidade;
-	}
-
 	public String getBairro() {
 		return bairro;
 	}
 
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
-	}
-
-	public String getLocalidade() {
-		return localidade;
-	}
-
-	public void setLocalidade(String localidade) {
-		this.localidade = localidade;
 	}
 
 	public String getUf() {
@@ -122,32 +95,6 @@ public class Endereco {
 	public void setIbge(String ibge) {
 		this.ibge = ibge;
 	}
-
-	public String getGia() {
-		return gia;
-	}
-
-	public void setGia(String gia) {
-		this.gia = gia;
-	}
-
-	public String getDdd() {
-		return ddd;
-	}
-
-	public void setDdd(String ddd) {
-		this.ddd = ddd;
-	}
-
-	public String getSiafi() {
-		return siafi;
-	}
-
-	public void setSiafi(String siafi) {
-		this.siafi = siafi;
-	}
-
-
 	
 	
 	
