@@ -62,7 +62,7 @@ public class ContaTipo {
 
 	public enum Enum {
 
-		PESSOA_FISICA(1L, "pessoa_fisica"), PESSOA_JURIDICA(2L, "pessoa_juridica");
+		CORRENTE(1L, "corrente"), POUPANÇA(2L, "poupanca");
 
 		private Enum(Long id, String description) {
 			this.id = id;
